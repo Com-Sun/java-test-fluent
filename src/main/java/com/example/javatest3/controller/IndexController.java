@@ -24,6 +24,6 @@ public class IndexController {
     public String index2() {
         log.info("[time: ]fluent bit 테스트용 접속 로깅", LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME));
 
-        return "hello K8s 제발가자!!!!!!!!";
+        return "hello K8s 제발가자!!!!!!!!!";
     }
 }
