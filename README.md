@@ -2,9 +2,4 @@
 # java-test-for-org
 # java-test-for-org
 
-
-..........a
-d
-a
-a
-a
+test1
