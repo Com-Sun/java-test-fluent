@@ -8,12 +8,16 @@ package com.example.javatest3.controller;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
 public class IndexController {
+
+    @Value("${test}")
+    private String test;
 
     @GetMapping("/index")
     public String index() {
@@ -23,6 +27,7 @@ public class IndexController {
     @GetMapping("/")
     public String index2() {
         log.info("[time: ]fluent bit 테스트용 접속 로깅", LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME));
+        log.info(test);
 
         return "hello K8s 제발가자!!!!!!!!!";
     }
